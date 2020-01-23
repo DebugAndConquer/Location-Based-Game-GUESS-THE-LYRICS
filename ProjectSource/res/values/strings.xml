@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">GuessTheLyrics</string>
+    <string name="title_activity_classic_mode">Map</string>
+    <string name="close">CLOSE</string>
+    <string name="bp">BACKPACK</string>
+    <string name="collText">COLLECT!</string>
+    <string name="mainClassic">Classic</string>
+    <string name="mainCurrent">Current</string>
+    <string name="title">Guess The Song!</string>
+    <string name="bpGm">gameModeForBackpack</string>
+    <string name="pointViewTxt">"Points: %1$d"</string>
+    <string name="bpUp">Backpack Upgrade</string>
+    <string name="bpUpMess">Would you like to upgrade your backpack for 500 points?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="gmExtra">gameMode</string>
+    <string name="newSetOfM">New set of markers has been generated!</string>
+    <string name="collLyric">Collected 1 lyric!</string>
+    <string name="collLyrics">Collected %1$d lyrics!</string>
+    <string name="classicFolder">"classic_lyrics"</string>
+    <string name="currentFolder">current_lyrics</string>
+    <string name="classicFolder1">"classic_lyrics/%1$s"</string>
+    <string name="currentFolder1">current_lyrics/%1$s</string>
+    <string name="gpsOffAlert">GPS or Cellular is off. Please turn it on!</string>
+    <string name="openLocSetts">Open Location Settings</string>
+    <string name="openCellSetts">Open Cellular Settings</string>
+    <string name="androidSetts">com.android.settings</string>
+    <string name="cellSetts">com.android.settings.Settings$DataUsageSummaryActivity</string>
+    <string name="bpFull">Backpack is Full</string>
+    <string name="collect">Collect</string>
+    <string name="ptsCounter">Points: %1$s</string>
+    <string name="jdbcPackage">com.mysql.jdbc.Driver</string>
+    <string name="jdbcPort">
+        jdbc:mysql://localhost:3306/guess_lyrics?characterEncoding=latin1&amp;useConfigs=maxPerformance
+    </string>
+    <string name="jdbcUserName">root</string>
+    <string name="id">ID</string>
+    <string name="songId">SongId</string>
+    <string name="lyricPart">lyricPart</string>
+    <string name="size">Size</string>
+    <string name="unkSong">Unknown Song 1</string>
+    <string name="unkSongs">Unknown Song %1$d</string>
+    <string name="titlePrompt">Enter the title of the song:</string>
+    <string name="guessButt">GUESS</string>
+    <string name="getBpSQL">SELECT * FROM backpack WHERE gameMode = \'%1$d\'</string>
+    <string name="triggerGuessSQL">SELECT COUNT(*), id FROM songs WHERE title = \'</string>
+    <string name="countSQL">COUNT(*)</string>
+    <string name="idSQL">id</string>
+    <string name="checkGuessSQL">SELECT COUNT(*) FROM BACKPACK
+        WHERE SongId = \'%1$d\' AND lyricPart = \'%2$s\'</string>
+    <string name="tryAgainPrompt">Try Again!</string>
+    <string name="giveUpPrompt">GIVE UP</string>
+    <string name="checkGuess1SQL">SELECT songId FROM backpack WHERE lyricPart = \'%1$s\'</string>
+    <string name="deleteFromBpSQL">DELETE FROM backpack WHERE songId = \'%1d\'</string>
+    <string name="correct">Correct!</string>
+    <string name="youGaveUpMessage">You gave up. Subtracting points</string>
+    <string name="bpInsertSQL">INSERT INTO backpack (ID, gameMode, SongId, lyricPart)
+        VALUES (NULL,\'%1$d\',\'%2$d\',\'%3$s\')</string>
+    <string name="file">File:</string>
+    <string name="idByLyricSQL">SELECT id FROM songs WHERE lyrics = \'%1$s\'</string>
+    <string name="getPtsSQL">SELECT points FROM points WHERE gameMode = \'%1$d\'</string>
+    <string name="pointsSQL">points</string>
+    <string name="setPtsPlusSQL">UPDATE points
+        SET points = points + \'%1$d\' WHERE gameMode = \'%2$d\'</string>
+    <string name="setPtsMinusSQL">UPDATE points
+        SET points = points - \'%1$d\' WHERE gameMode = \'%2$d\'</string>
+    <string name="setPtsZroSQL">UPDATE points SET points = 0 WHERE gameMode = \'%1$d\'</string>
+    <string name="getAttemptsSQL">SELECT SUM(numberAttempts)
+        FROM backpack WHERE songId = \'%1$d\'</string>
+    <string name="numLyrPartsSQL">
+        SELECT COUNT(*) FROM backpack WHERE songId = \'%1$d\' AND gameMode = \'%2$d\'</string>
+    <string name="updateAttemptsSQL"> UPDATE backpack SET
+        numberAttempts = (numberAttempts + 1) WHERE lyricPart = \'%1$s\'</string>
+    <string name="checkBpSizeSQL">SELECT COUNT(*) FROM backpack WHERE gameMode = \'%1$d\'</string>
+    <string name="checkBpCapacitySQL">SELECT bpSize FROM points WHERE gameMode = \'%1$d\'</string>
+    <string name="setBpCapacity">
+        UPDATE points SET bpSize = \'%1$d\' WHERE gameMode = \'%2$d\'</string>
+    <string name="sumAttemptsSQL">SUM(numberAttempts)</string>
+    <string name="bpSizeSQL">bpSize</string>
+    <string name="pointsZero">Points: 0</string>
+
+</resources>
